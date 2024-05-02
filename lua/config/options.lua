@@ -30,5 +30,13 @@ vim.filetype.add({
 })
 
 -- Neovide Options
-vim.g.neovide_floating_blur_amount_x = 5.0
-vim.g.neovide_floating_blur_amount_y = 5.0
+vim.g.neovide_floating_blur_amount_x = 3.0
+vim.g.neovide_floating_blur_amount_y = 3.0
+
+-- Change Neovim Shell based on OS
+local os_name = vim.loop.os_uname().sysname
+if os_name ~= nil then
+  if os_name == "Windows_NT" then
+    vim.opt.shell = "powershell.exe"
+  end
+end
