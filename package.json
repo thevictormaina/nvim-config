@@ -1,0 +1,15 @@
+{
+  "name": "nvim",
+  "version": "1.0.0",
+  "description": "<a href=\"https://dotfyle.com/thevictormaina/nvim-config\"><img src=\"https://dotfyle.com/thevictormaina/nvim-config/badges/plugins?style=flat\" /></a> <a href=\"https://dotfyle.com/thevictormaina/nvim-config\"><img src=\"https://dotfyle.com/thevictormaina/nvim-config/badges/leaderkey?style=flat\" /></a> <a href=\"https://dotfyle.com/thevictormaina/nvim-config\"><img src=\"https://dotfyle.com/thevictormaina/nvim-config/badges/plugin-manager?style=flat\" /></a>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prettier/plugin-lua": "^0.0.3"
+  }
+}
