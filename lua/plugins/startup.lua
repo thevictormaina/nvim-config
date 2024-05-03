@@ -1,7 +1,10 @@
 return {
   "startup-nvim/startup.nvim",
   dependecies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+  enabled = false,
   config = function()
-    require("startup").setup()
+    require("startup").setup({
+      theme = "evil",
+    })
   end,
 }

@@ -3,6 +3,5 @@ return {
   config = function()
     local notify = require("notify")
     notify.setup()
-    notify("Welcome to Neovim!")
   end,
 }
