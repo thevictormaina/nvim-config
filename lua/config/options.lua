@@ -4,7 +4,11 @@ vim.opt.shiftwidth = 2
 vim.opt.softtabstop = 2
 vim.opt.tabstop = 2
 
+-- Enable terminal GUI colors
 vim.opt.termguicolors = true
+
+-- Use separate notify function
+vim.nofity = require("notify")
 
 -- make zsh files recognized as sh for bash-ls & treesitter
 -- vim.filetype.add {

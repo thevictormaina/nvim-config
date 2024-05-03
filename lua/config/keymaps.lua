@@ -10,16 +10,18 @@ vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagn
 
 -- [[ Buffer Handling ]]
 -- Close current buffer
-vim.keymap.set("n", "<leader>bd", "<cmd>w<CR><cmd>bd<CR>", { desc = "Unload current buffer" })
+vim.keymap.set("n", "<leader>bd", "<cmd>bd<CR>", { desc = "Unload current buffer" })
 -- Close all buffers
-vim.keymap.set("n", "<leader>ba", "<cmd>wa<CR><cmd>%bd<CR>", { desc = "Close all buffers" })
+vim.keymap.set("n", "<leader>ba", "<cmd>%bd<CR>", { desc = "Close all buffers" })
 -- Close all buffers expect current
-vim.keymap.set("n", "<leader>bo", "<cmd>wa<CR><cmd>%bd | e #<CR>", { desc = "Close all buffers expect current" })
+vim.keymap.set("n", "<leader>bo", "<cmd>%bd | e #<CR>", { desc = "Close all buffers expect current" })
 -- Go to previous buffer
 vim.keymap.set("n", "<leader>bp", "<cmd>bp<CR>", { desc = "Go to previous buffer" })
 vim.keymap.set("n", "[b", "<cmd>bp<CR>", { desc = "Go to previous buffer" })
 -- Go to next buffer
 vim.keymap.set("n", "]b", "<cmd>bn<CR>", { desc = "Go to next buffer" })
+-- Save current buffer
+vim.keymap.set({ "n", "i" }, "<C-s>", "<cmd>w<CR>", { desc = "Save current buffer" })
 
 -- [[ Menu and docs navigation ]]
 --

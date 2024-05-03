@@ -166,6 +166,14 @@ return { -- LSP Configuration & Plugins
       --
       -- But for many setups, the LSP (`tsserver`) will work just fine
       tsserver = {},
+      jsonls = {
+        settings = {
+          json = {
+            schemas = require("schemastore").json.schemas(),
+            validate = { enable = true },
+          },
+        },
+      },
       lua_ls = {
         -- cmd = {...},
         -- filetypes = { ...},
