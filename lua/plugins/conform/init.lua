@@ -30,10 +30,12 @@ return {
 				}
 			end,
 			formatters_by_ft = {
-				lua = { "prettier_lua" },
+				lua = { "lua_formatter" },
 				javascript = { "prettier" },
 				typescript = { "prettier" },
-				-- sh = { "prettier" },
+				typescriptreact = { "prettier" },
+				sh = { "bash_formatter" },
+				php = { "php_formatter" },
 				-- Conform can also run multiple formatters sequentially
 				-- python = { "isort", "black" },
 				--
@@ -46,5 +48,11 @@ return {
 
 		-- Add Lua Formatter
 		require("plugins.conform.lua_formatter")
+
+		-- Add Bash Formatter
+		require("plugins.conform.bash_formatter")
+
+		-- Add PHP Formatter
+		require("plugins.conform.php_formatter")
 	end,
 }

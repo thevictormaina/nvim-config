@@ -1,6 +1,3 @@
-local conform = require("conform")
-conform.setup({})
-
 -- New formatter for Lua based on Prettier
 local lua_formatter = vim.deepcopy(require("conform.formatters.prettier"))
 
@@ -13,4 +10,4 @@ require("conform.util").add_formatter_args(lua_formatter, args, {
 })
 
 ---@cast lua_formatter conform.FormatterConfigOverride
-require("conform").formatters.prettier_lua = lua_formatter
+require("conform").formatters.lua_formatter = lua_formatter

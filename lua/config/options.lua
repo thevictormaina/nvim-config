@@ -23,14 +23,14 @@ vim.nofity = require("notify")
 -- }
 
 vim.filetype.add({
-  extension = {
-    zsh = "sh",
-    sh = "sh",
-  },
-  filename = {
-    [".zshrc"] = "sh",
-    [".zshenv"] = "sh",
-  },
+	extension = {
+		zsh = "sh",
+		sh = "sh",
+	},
+	filename = {
+		[".zshrc"] = "sh",
+		[".zshenv"] = "sh",
+	},
 })
 
 -- Neovide Options
@@ -38,9 +38,16 @@ vim.g.neovide_floating_blur_amount_x = 3.0
 vim.g.neovide_floating_blur_amount_y = 3.0
 
 -- Change Neovim Shell based on OS
-local os_name = vim.loop.os_uname().sysname
-if os_name ~= nil then
-  if os_name == "Windows_NT" then
-    vim.opt.shell = "powershell.exe"
-  end
-end
+-- local os_name = require("lib.os-name")
+-- if os_name == "Windows_NT" then
+-- 	vim.opt.shell = "powershell.exe"
+-- end
+require("lib.check-os")({ Windows_NT = function()
+	vim.opt.shell = "pwsh.exe"
+end })
+
+-- Vim-Astro Syntax Highlighting Options
+vim.g.astro_typescript = "enable"
+
+
+-- vim.g.astro_stylus = 'enable'
