@@ -7,37 +7,33 @@ return {
 	config = function()
 		require("neovim-project").setup({
 			projects = {
-				"D:/Client Projects/*",
-				"D:/Client Projects/*/*",
-				"D:/Coding Projects/*",
-				"D:/Coding Practice/*",
-				"~/projects/*",
-				"~/practice-projects/*",
-				"~/client-projects/*",
-				"~/.config/nvim/",
-				"~/AppData/Local/nvim/",
+				"D:/.vmg/projects/coding/*",
+				"~/.vmg/projects/coding/*",
+				"D:/.vmg/projects/client_projects/*",
+				"~/.vmg/projects/client_projects/*",
+				"D:/.vmg/projects/client_projects/*/*",
+				"~/.vmg/projects/client_projects/*/*",
 			},
 		})
-		require("which-key").register(
+		require("which-key").add({
+			"<leader>p",
+			group = "[P]rojects",
 			{
-				p = {
-					name = "[P]rojects",
-					l = {
-						"<cmd>Telescope neovim-project discover<CR>",
-						"[L]ist all projects",
-					},
-					h = {
-						"<cmd>Telescope neovim-project history<CR>",
-						"View project [H]istory",
-					},
-					r = {
-						"<cmd>NeovimProjectLoadRecent<CR>",
-						"Open [R]ecent project",
-					},
-				},
+				"<leader>pl",
+				"<cmd>Telescope neovim-project discover<CR>",
+				desc = "[L]ist all projects",
 			},
-			{ prefix = "<leader>" }
-		)
+			{
+				"<leader>ph",
+				"<cmd>Telescope neovim-project history<CR>",
+				desc = "View project [H]istory",
+			},
+			{
+				"<leader>pr",
+				"<cmd>NeovimProjectLoadRecent<CR>",
+				desc = "Open [R]ecent project",
+			},
+		})
 	end,
 	dependencies = { { "nvim-lua/plenary.nvim" }, {
 		"nvim-telescope/telescope.nvim",
