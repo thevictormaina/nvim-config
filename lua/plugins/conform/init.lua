@@ -36,6 +36,7 @@ return {
 				typescriptreact = { "prettier" },
 				sh = { "bash_formatter" },
 				php = { "php_formatter" },
+				go = { "gci", "gofumpt", "goimports" }
 				-- Conform can also run multiple formatters sequentially
 				-- python = { "isort", "black" },
 				--

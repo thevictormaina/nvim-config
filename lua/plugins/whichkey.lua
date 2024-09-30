@@ -30,6 +30,9 @@ return {
 			"<leader>b",
 			desc = "[B]uffer",
 		}, {
+			"<leader>o",
+			desc = "[O]utline",
+		}, {
 			"<leader>lg",
 			desc = "<cmd>LazyGit<cr>",
 		} })
